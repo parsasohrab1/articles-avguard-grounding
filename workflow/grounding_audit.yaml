@@ -1,0 +1,31 @@
+# AvGuard-Ground workflow: from an AI-written summary to an audited decision
+name: grounding_audit
+version: 1
+inputs:
+  - source_record      # narrative + metadata of the occurrence (NTSB / ASRS / maintenance finding)
+  - ai_summary         # text produced by an LLM or a person
+steps:
+  - id: extract_claims
+    do: Split the summary into field-level claims (injury level, weather, light, mid-air, and later damage, phase of flight)
+    owner: LLM or rules
+  - id: retrieve_evidence
+    do: Locate the narrative sentences that mention the claimed field
+  - id: score_support
+    do: support score = P(claimed value | narrative) from the independent re-derivation model
+  - id: route
+    thresholds: {t_accept: "conformal, false-accept rate <= alpha (default 0.05)", t_reject: 0.05}
+    outcomes:
+      auto_accept: score > t_accept
+      flag_contradicted: score < t_reject
+      human_review: otherwise
+  - id: human_review
+    do: Safety analyst confirms or corrects the claim; decision and reason are logged
+  - id: audit_log
+    do: Append JSON line (ts, claim, score, decision, reviewer, final) to the audit trail
+  - id: recalibrate
+    cadence: after each new year of closed investigations or when review overturn rate exceeds 10 %
+    do: refresh calibration false-claim scores and the threshold; never retrain on reviewer-overturned claims without a second reviewer
+controls:
+  - The model never writes to the investigation record; it only routes claims.
+  - Auto-accept is limited to claim types whose measured false-accept rate stayed <= alpha on the latest temporal test.
+  - Every threshold, data version and model version is stored with the decision.
