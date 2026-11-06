@@ -116,7 +116,7 @@ def rebuild(root: Path) -> dict:
             "narrative_chars": NARRATIVE_CHARS,
             "n_truncated": n_truncated,
             "response_sha256": response_digest(ids, replies),
-            "sample_sha256": sha256_bytes(sample_path.read_bytes()),
+            "sample_sha256": sha256_bytes(sample_path.read_bytes().replace(b"\r\n", b"\n")),
             "alpha": ALPHA,
             "t_reject": T_REJECT,
             "min_false_cal": MIN_FALSE_CAL,

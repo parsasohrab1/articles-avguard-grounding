@@ -11,7 +11,7 @@
   "narrative_chars": 3000,
   "n_truncated": 66,
   "response_sha256": "b743d137dd01edd1251cf3ae1b70a03589fac27502060adf4cf2f9f8cabccd8d",
-  "sample_sha256": "df8051d76edf1ab8f0e6e20fbbd05aaff8cc59f989f3290049bd37529b3083ab",
+  "sample_sha256": "737fef9f777fd010113f450924771a4aad405215ac67b0f34570829b078f1b59",
   "alpha": 0.05,
   "t_reject": 0.05,
   "min_false_cal": 20,
