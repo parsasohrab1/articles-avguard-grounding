@@ -1,7 +1,8 @@
-"""Claim model. A claim asserts one value of one structured field about an occurrence; it is checked against the narrative."""
+"""Field-level claim: one structured value checked against the narrative."""
+
 import numpy as np
 
-FIELDS = {          # field -> allowed values
+FIELDS = {  # field -> allowed values
     "injury": ["NONE", "MINR", "SERS", "FATL"],
     "weather": ["VMC", "IMC"],
     "light": ["day", "night"],
@@ -10,7 +11,7 @@ FIELDS = {          # field -> allowed values
 
 
 def make_claims(true_values, field, rng):
-    """For every record return (true claim value, perturbed claim value). The perturbed value is a different value drawn at random."""
+    """Return the recorded value and one other allowed value, for a legacy check."""
     vals = FIELDS[field]
     wrong = np.array([rng.choice([v for v in vals if v != t]) for t in true_values])
     return np.asarray(true_values), wrong

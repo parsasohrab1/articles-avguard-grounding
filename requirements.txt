@@ -2,3 +2,4 @@ numpy
 scikit-learn
 access-parser
 pytest
+ruff

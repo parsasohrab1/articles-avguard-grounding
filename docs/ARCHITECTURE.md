@@ -1,6 +1,5 @@
 # Architecture
-source narrative + AI summary -> `claims` (field-level claims) -> `verifier` (TF-IDF + logistic regression per field, trained on past narratives) -> support score ->
-`conformal.false_accept_threshold` (calibration false claims) -> `workflow.route` -> auto-accept | human review | flagged -> JSONL audit trail.
-- `scripts/prepare_data.py` builds data/records.csv from the public NTSB database; `scripts/run_experiment.py` evaluates (random and temporal split).
-- Claims in the evaluation are built from the database's structured fields (true) and by replacing the value with a different one (false); no language model was run.
-- See `workflow/grounding_audit.yaml` for the operating procedure.
+
+A language model reads one narrative and states field values. Those stated values are the claims. Each claim is compared with the structured field on the same NTSB record. A text classifier trained on other narratives assigns a support score (`verifier`). The rule that turns the score into a cutoff is implemented in `conformal.py` and is not described in this file. A patent attorney must review it before any public description. Routing labels are automatic accept, human review, and flag. A decision can be appended to a JSONL audit trail.
+
+`scripts/prepare_data.py` builds `data/records.csv` from the public NTSB pre-2008 release. `scripts/make_sample.py` draws the sample that the model sees. `scripts/call_llm.py` calls the model; the API key is read from the environment and is never written by these scripts. `scripts/fit_support.py` writes support scores for the held-out rows. `scripts/run_experiment.py` rebuilds `outputs/results.json` and the measured docs from the saved replies and scores. It does not call the model.

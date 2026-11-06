@@ -1,3 +1,9 @@
 data/
 __pycache__/
 *.mdb
+*.zip
+.env
+.ruff_cache/
+.pytest_cache/
+*.egg-info/
+.venv/
