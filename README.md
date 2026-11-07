@@ -1,6 +1,6 @@
 # AvGuard-Ground (articles-avguard-grounding)
 
-A language model reads a public NTSB narrative and states four field values. Each stated value is compared with the structured field on the same record. A text classifier trained on other narratives assigns a support score. The rule that turns that score into a cutoff is implemented in code and is not written out in this file. A patent attorney must review it before any public description or submission.
+A language model reads a public NTSB narrative and states four field values. Each stated value is compared with the structured field on the same record. A text classifier trained on other narratives assigns a support score. The rule that turns that score into a cutoff is implemented in code and is not written out in this file.
 
 ## Run
 

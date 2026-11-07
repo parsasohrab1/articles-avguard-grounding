@@ -1,8 +1,7 @@
 """Article and achievement card for the product basket.
 
 Measured rows are formatted from outputs/results.json. The article row stays
-unsubmitted: the checked special issue is past its printed deadline, and a
-patent attorney has not reviewed a manuscript. This card does not describe
+unsubmitted: the checked special issue is past its printed deadline. This card does not describe
 the cutoff rule.
 """
 
