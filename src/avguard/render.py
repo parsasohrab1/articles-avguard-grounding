@@ -5,6 +5,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from avguard.record import registration_markdown
+
 FIELDS = ("injury", "weather", "light", "midair")
 
 
@@ -152,7 +154,7 @@ Full numbers: `outputs/results.json`, rebuilt by `python scripts/run_experiment.
 
 ## Journal
 
-The Advanced Engineering Informatics special issue on large language models in aviation safety closed on 31 March 2026. This repository does not submit a manuscript. See `docs/JOURNAL_FIT.md` and `docs/TRL.md`.
+The Advanced Engineering Informatics special issue on large language models in aviation safety closed on 31 March 2026. This repository does not submit a manuscript. The basket card for article registration and achievements is `docs/REGISTRATION.md` (product id `avguard`). It is regenerated from `outputs/results.json`. The article status on that card is unsubmitted. See `docs/JOURNAL_FIT.md` and `docs/TRL.md`.
 """
 
 
@@ -187,13 +189,18 @@ This branch: a language model was run on a sample of public NTSB narratives. Cla
 
 Submission: not made, and not to be made to this special issue. The deadline has passed. Before any later submission to another call, complete the journal fitness gate in the Articles tab for that call, and have a patent attorney confirm that the cutoff rule is not disclosed.
 
-The cutoff rule is in code so the saved scores can be aggregated. It is not described in the README or the abstract.
+The cutoff rule is in code so the saved scores can be aggregated. It is not described in the README, the abstract, or `docs/REGISTRATION.md`.
+
+The internal filing card is [REGISTRATION.md](REGISTRATION.md). It is regenerated from `outputs/results.json`. The article status on that card is unsubmitted.
 """
 
 
 def write_docs(root: Path, results: dict) -> None:
     (root / "README.md").write_text(readme_text(results), encoding="utf-8", newline="\n")
     (root / "docs").mkdir(exist_ok=True)
+    (root / "docs" / "REGISTRATION.md").write_text(
+        registration_markdown(results), encoding="utf-8", newline="\n"
+    )
     (root / "docs" / "TRL.md").write_text(trl_text(results), encoding="utf-8", newline="\n")
     (root / "docs" / "JOURNAL_FIT.md").write_text(
         journal_fit_text(), encoding="utf-8", newline="\n"

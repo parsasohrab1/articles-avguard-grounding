@@ -10,4 +10,4 @@
    - FR5 Report per-field false-accept and true-accept rates, split by random and temporal test.
 5. Non-functional: runs on-premises, no narrative leaves the site; calibration in seconds; full reproducibility from the public NTSB release.
 6. Out of scope: replacing the investigator, causal conclusions, certification credit.
-7. Acceptance: reproduce outputs/results.json from the saved model replies (`python scripts/run_experiment.py`). Report the match rate of values the model stated. State a false-accept share only when that file marks the field as estimated.
+7. Acceptance: reproduce outputs/results.json from the saved model replies (`python scripts/run_experiment.py`). Report the match rate of values the model stated. State a false-accept share only when that file marks the field as estimated. Keep the article and achievement card (`docs/REGISTRATION.md`) equal to that file, with the article unsubmitted and the cutoff rule undescribed.

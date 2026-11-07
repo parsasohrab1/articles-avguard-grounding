@@ -52,4 +52,4 @@ Full numbers: `outputs/results.json`, rebuilt by `python scripts/run_experiment.
 
 ## Journal
 
-The Advanced Engineering Informatics special issue on large language models in aviation safety closed on 31 March 2026. This repository does not submit a manuscript. See `docs/JOURNAL_FIT.md` and `docs/TRL.md`.
+The Advanced Engineering Informatics special issue on large language models in aviation safety closed on 31 March 2026. This repository does not submit a manuscript. The basket card for article registration and achievements is `docs/REGISTRATION.md` (product id `avguard`). It is regenerated from `outputs/results.json`. The article status on that card is unsubmitted. See `docs/JOURNAL_FIT.md` and `docs/TRL.md`.

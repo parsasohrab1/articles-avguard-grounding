@@ -10,4 +10,6 @@ This branch: a language model was run on a sample of public NTSB narratives. Cla
 
 Submission: not made, and not to be made to this special issue. The deadline has passed. Before any later submission to another call, complete the journal fitness gate in the Articles tab for that call, and have a patent attorney confirm that the cutoff rule is not disclosed.
 
-The cutoff rule is in code so the saved scores can be aggregated. It is not described in the README or the abstract.
+The cutoff rule is in code so the saved scores can be aggregated. It is not described in the README, the abstract, or `docs/REGISTRATION.md`.
+
+The internal filing card is [REGISTRATION.md](REGISTRATION.md). It is regenerated from `outputs/results.json`. The article status on that card is unsubmitted.
