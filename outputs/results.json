@@ -1,493 +1,128 @@
 {
- "n_records": 27443,
- "years": [
-  1974,
-  2007
- ],
- "alphas": [
-  0.05,
-  0.1
- ],
- "t_reject": 0.05,
- "splits": {
-  "random": {
+ "provenance": {
+  "corpus_n": 27443,
+  "years": [
+   1974,
+   2007
+  ],
+  "sample_n": 200,
+  "seed": 0,
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "narrative_chars": 3000,
+  "n_truncated": 66,
+  "response_sha256": "b743d137dd01edd1251cf3ae1b70a03589fac27502060adf4cf2f9f8cabccd8d",
+  "sample_sha256": "737fef9f777fd010113f450924771a4aad405215ac67b0f34570829b078f1b59",
+  "alpha": 0.05,
+  "t_reject": 0.05,
+  "min_false_cal": 20,
+  "api_key_in_repo": false
+ },
+ "claims": {
+  "n_slots": 800,
+  "n_answered": 669,
+  "n_abstain": 131,
+  "n_match": 350,
+  "n_mismatch": 319,
+  "match_rate_answered": 0.523169,
+  "by_field": {
    "injury": {
-    "verifier_accuracy": [
-     0.9478350640675289,
-     0.002084290071261372
-    ],
-    "alpha_0.05": {
-     "false_accept": [
-      0.050100200400801605,
-      0.001715485138984092
-     ],
-     "true_accept": [
-      0.9761340863545271,
-      0.001123048643280895
-     ],
-     "review_share_true": [
-      0.014696058784235138,
-      0.0005223978421717752
-     ],
-     "flagged_false": [
-      0.8360357077791947,
-      0.003935592821040753
-     ],
-     "flagged_true": [
-      0.009169854861237626,
-      0.000990435806783269
-     ],
-     "threshold": [
-      0.1843764310636367,
-      0.006175231450808606
-     ]
-    },
-    "alpha_0.1": {
-     "false_accept": [
-      0.10354041416165664,
-      0.0006707573338912547
-     ],
-     "true_accept": [
-      0.9863363089815995,
-      0.0008282128922685254
-     ],
-     "review_share_true": [
-      0.004493836157162811,
-      0.0006870534097883501
-     ],
-     "flagged_false": [
-      0.8360357077791947,
-      0.003935592821040753
-     ],
-     "flagged_true": [
-      0.009169854861237626,
-      0.000990435806783269
-     ],
-     "threshold": [
-      0.08770829345033576,
-      0.0015775707770226007
-     ]
-    }
+    "n": 200,
+    "n_answered": 197,
+    "n_abstain": 3,
+    "n_match": 115,
+    "n_mismatch": 82,
+    "match_rate_answered": 0.583756
    },
    "weather": {
-    "verifier_accuracy": [
-     0.970486427400255,
-     0.0010412599866085098
-    ],
-    "alpha_0.05": {
-     "false_accept": [
-      0.047792554806582864,
-      0.0030965078724678355
-     ],
-     "true_accept": [
-      0.9850003036375782,
-      0.0004544431149297433
-     ],
-     "review_share_true": [
-      0.011173862877269692,
-      0.0010964638419425391
-     ],
-     "flagged_false": [
-      0.8839497176170523,
-      0.0040764405044849475
-     ],
-     "flagged_true": [
-      0.0038258334851521223,
-      0.0011806778463122353
-     ],
-     "threshold": [
-      0.266025547418444,
-      0.010226084829359395
-     ]
-    },
-    "alpha_0.1": {
-     "false_accept": [
-      0.10117204105180057,
-      0.005506482339968013
-     ],
-     "true_accept": [
-      0.9951417987490131,
-      0.000819258976330356
-     ],
-     "review_share_true": [
-      0.0010323677658346997,
-      0.00037434954776030706
-     ],
-     "flagged_false": [
-      0.8839497176170523,
-      0.0040764405044849475
-     ],
-     "flagged_true": [
-      0.0038258334851521223,
-      0.0011806778463122353
-     ],
-     "threshold": [
-      0.06482176938357405,
-      0.005134185586988716
-     ]
-    }
+    "n": 200,
+    "n_answered": 187,
+    "n_abstain": 13,
+    "n_match": 149,
+    "n_mismatch": 38,
+    "match_rate_answered": 0.796791
    },
    "light": {
-    "verifier_accuracy": [
-     0.9435234104572782,
-     0.0028379963431220995
-    ],
-    "alpha_0.05": {
-     "false_accept": [
-      0.052529301026295015,
-      0.002620446834322149
-     ],
-     "true_accept": [
-      0.9381793890811928,
-      0.00329387298775021
-     ],
-     "review_share_true": [
-      0.05416894394850307,
-      0.003317301338130241
-     ],
-     "flagged_false": [
-      0.7519280986214855,
-      0.003942146685399314
-     ],
-     "flagged_true": [
-      0.007651666970304245,
-      0.000148751426658358
-     ],
-     "threshold": [
-      0.5478906960389683,
-      0.011907562206876023
-     ]
-    },
-    "alpha_0.1": {
-     "false_accept": [
-      0.10153640614562458,
-      0.006031926904397413
-     ],
-     "true_accept": [
-      0.9697576972126071,
-      0.001689491436599692
-     ],
-     "review_share_true": [
-      0.022590635817088724,
-      0.0016763434434738877
-     ],
-     "flagged_false": [
-      0.7519280986214855,
-      0.003942146685399314
-     ],
-     "flagged_true": [
-      0.007651666970304245,
-      0.000148751426658358
-     ],
-     "threshold": [
-      0.22140735768651051,
-      0.010908895358437486
-     ]
-    }
+    "n": 200,
+    "n_answered": 88,
+    "n_abstain": 112,
+    "n_match": 74,
+    "n_mismatch": 14,
+    "match_rate_answered": 0.840909
    },
    "midair": {
-    "verifier_accuracy": [
-     0.9958098014210238,
-     0.0010726617922302223
-    ],
-    "alpha_0.05": {
-     "false_accept": [
-      0.05313657618266837,
-      0.0035274271528408585
-     ],
-     "true_accept": [
-      0.9998785449687254,
-      8.588167622356288e-05
-     ],
-     "review_share_true": [
-      0.0,
-      0.0
-     ],
-     "flagged_false": [
-      0.9894334122791036,
-      0.00107266179223026
-     ],
-     "flagged_true": [
-      0.0006680026720106881,
-      8.588167622354377e-05
-     ],
-     "threshold": [
-      0.007951350155190448,
-      0.0030275450880912582
-     ]
-    },
-    "alpha_0.1": {
-     "false_accept": [
-      0.10560514969332606,
-      0.0035148590826471838
-     ],
-     "true_accept": [
-      0.9999392724843627,
-      8.588167622356288e-05
-     ],
-     "review_share_true": [
-      0.0,
-      0.0
-     ],
-     "flagged_false": [
-      0.9894334122791036,
-      0.00107266179223026
-     ],
-     "flagged_true": [
-      0.0006680026720106881,
-      8.588167622354377e-05
-     ],
-     "threshold": [
-      0.0037663471073609996,
-      0.0006953802744919871
-     ]
-    }
+    "n": 200,
+    "n_answered": 197,
+    "n_abstain": 3,
+    "n_match": 12,
+    "n_mismatch": 185,
+    "match_rate_answered": 0.060914
    }
-  },
-  "temporal": {
+  }
+ },
+ "support": {
+  "n_train": 120,
+  "n_cal": 40,
+  "n_test": 40,
+  "by_field": {
    "injury": {
-    "n_train": 3544,
-    "n_cal": 9896,
-    "n_test": 14003,
-    "verifier_accuracy": [
-     0.8800971220452759,
-     1.1102230246251565e-16
-    ],
-    "alpha_0.05": {
-     "false_accept": [
-      0.05577376276512177,
-      0.0021336519165223206
-     ],
-     "true_accept": [
-      0.9114475469542241,
-      0.0010640337374670916
-     ],
-     "review_share_true": [
-      0.08276797829036635,
-      0.0010640337374670636
-     ],
-     "flagged_false": [
-      0.6269608893332381,
-      0.0016014557063061818
-     ],
-     "flagged_true": [
-      0.005784474755409555,
-      0.0
-     ],
-     "threshold": [
-      0.3156671079534394,
-      0.0031250188497675925
-     ]
-    },
-    "alpha_0.1": {
-     "false_accept": [
-      0.10961936727844034,
-      0.0026122032647535403
-     ],
-     "true_accept": [
-      0.9540574638767882,
-      0.0005955864697182287
-     ],
-     "review_share_true": [
-      0.04015806136780214,
-      0.0005955864697182415
-     ],
-     "flagged_false": [
-      0.6269608893332381,
-      0.0016014557063061818
-     ],
-     "flagged_true": [
-      0.005784474755409555,
-      0.0
-     ],
-     "threshold": [
-      0.1886263251575496,
-      0.0019272575774264944
-     ]
-    }
+    "status": "not_estimated",
+    "reason": "fewer than 20 mismatched calibration claims",
+    "n_false_cal": 16,
+    "n_false_test": 20,
+    "n_true_test": 20,
+    "mean_score_true_test": 0.607632,
+    "mean_score_false_test": 0.168087,
+    "alpha": 0.05,
+    "threshold": null,
+    "false_accept": null,
+    "true_accept": null,
+    "flagged_false": null,
+    "flagged_true": null
    },
    "weather": {
-    "n_train": 3544,
-    "n_cal": 9896,
-    "n_test": 14003,
-    "verifier_accuracy": [
-     0.9615796615011069,
-     0.0
-    ],
-    "alpha_0.05": {
-     "false_accept": [
-      0.046847104191958866,
-      0.0
-     ],
-     "true_accept": [
-      0.9685781618224666,
-      0.0
-     ],
-     "review_share_true": [
-      0.028136827822609442,
-      0.0
-     ],
-     "flagged_false": [
-      0.8081839605798757,
-      0.0
-     ],
-     "flagged_true": [
-      0.0032850103549239445,
-      4.336808689942018e-19
-     ],
-     "threshold": [
-      0.41199984805533435,
-      0.0
-     ]
-    },
-    "alpha_0.1": {
-     "false_accept": [
-      0.11011926015853746,
-      0.0
-     ],
-     "true_accept": [
-      0.9922873669927873,
-      0.0
-     ],
-     "review_share_true": [
-      0.004427622652288795,
-      0.0
-     ],
-     "flagged_false": [
-      0.8081839605798757,
-      0.0
-     ],
-     "flagged_true": [
-      0.0032850103549239445,
-      4.336808689942018e-19
-     ],
-     "threshold": [
-      0.11987358307089319,
-      0.0
-     ]
-    }
+    "status": "not_estimated",
+    "reason": "fewer than 20 mismatched calibration claims",
+    "n_false_cal": 8,
+    "n_false_test": 6,
+    "n_true_test": 32,
+    "mean_score_true_test": 0.901533,
+    "mean_score_false_test": 0.057755,
+    "alpha": 0.05,
+    "threshold": null,
+    "false_accept": null,
+    "true_accept": null,
+    "flagged_false": null,
+    "flagged_true": null
    },
    "light": {
-    "n_train": 3544,
-    "n_cal": 9896,
-    "n_test": 14003,
-    "verifier_accuracy": [
-     0.9273012925801614,
-     0.0
-    ],
-    "alpha_0.05": {
-     "false_accept": [
-      0.04099121616796401,
-      0.0
-     ],
-     "true_accept": [
-      0.8776690709133758,
-      0.0
-     ],
-     "review_share_true": [
-      0.11726058701706778,
-      0.0
-     ],
-     "flagged_false": [
-      0.5778047561236878,
-      0.0
-     ],
-     "flagged_true": [
-      0.005070342069556524,
-      0.0
-     ],
-     "threshold": [
-      0.7370187347019378,
-      0.0
-     ]
-    },
-    "alpha_0.1": {
-     "false_accept": [
-      0.09633649932157395,
-      0.0
-     ],
-     "true_accept": [
-      0.9457259158751695,
-      1.1102230246251565e-16
-     ],
-     "review_share_true": [
-      0.04920374205527387,
-      0.0
-     ],
-     "flagged_false": [
-      0.5778047561236878,
-      0.0
-     ],
-     "flagged_true": [
-      0.005070342069556524,
-      0.0
-     ],
-     "threshold": [
-      0.3571995394093512,
-      5.551115123125783e-17
-     ]
-    }
+    "status": "not_estimated",
+    "reason": "fewer than 20 mismatched calibration claims",
+    "n_false_cal": 2,
+    "n_false_test": 2,
+    "n_true_test": 19,
+    "mean_score_true_test": 0.888564,
+    "mean_score_false_test": 0.82235,
+    "alpha": 0.05,
+    "threshold": null,
+    "false_accept": null,
+    "true_accept": null,
+    "flagged_false": null,
+    "flagged_true": null
    },
    "midair": {
-    "n_train": 3544,
-    "n_cal": 9896,
-    "n_test": 14003,
-    "verifier_accuracy": [
-     0.9945011783189317,
-     0.0
-    ],
-    "alpha_0.05": {
-     "false_accept": [
-      0.05884453331428979,
-      0.0
-     ],
-     "true_accept": [
-      0.9996429336570735,
-      0.0
-     ],
-     "review_share_true": [
-      0.0,
-      0.0
-     ],
-     "flagged_false": [
-      0.9940726987074199,
-      0.0
-     ],
-     "flagged_true": [
-      0.0022138113261443975,
-      0.0
-     ],
-     "threshold": [
-      0.011518067266289922,
-      0.0
-     ]
-    },
-    "alpha_0.1": {
-     "false_accept": [
-      0.12040277083482111,
-      0.0
-     ],
-     "true_accept": [
-      0.9997857601942441,
-      0.0
-     ],
-     "review_share_true": [
-      0.0,
-      0.0
-     ],
-     "flagged_false": [
-      0.9940726987074199,
-      0.0
-     ],
-     "flagged_true": [
-      0.0022138113261443975,
-      0.0
-     ],
-     "threshold": [
-      0.007678954522698849,
-      0.0
-     ]
-    }
+    "status": "estimated",
+    "reason": "",
+    "n_false_cal": 38,
+    "n_false_test": 37,
+    "n_true_test": 3,
+    "mean_score_true_test": 0.991063,
+    "mean_score_false_test": 0.008729,
+    "alpha": 0.05,
+    "threshold": 0.013921,
+    "false_accept": 0.0,
+    "true_accept": 1.0,
+    "flagged_false": 1.0,
+    "flagged_true": 0.0
    }
   }
  }
